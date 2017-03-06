@@ -1,0 +1,47 @@
+<%= form_for @about,  html: { multipart: true } do |f| %>
+  <% if @about.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@about.errors.count, "error") %> prohibited this about from being saved:</h2>
+
+      <ul>
+      <% @about.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group col-sm-12">
+    <label  class="col-sm-2 control-label">Shop Name :</label>
+    <div class="col-sm-7">
+    <%= f.text_field :shopname, class: "form-control"%>
+    <br>
+    </div>
+  </div>
+  <div class="form-group col-sm-12">
+    <label  class="col-sm-2 control-label">About Info :</label>
+    <div class="col-sm-7">
+    <%= f.text_area :aboutinfo, class: "form-control", rows: 5 %>
+    <br>
+    </div>
+  </div>
+  <div class="form-group col-sm-12">
+    <label  class="col-sm-2 control-label">Upload You shop Image (Only 4 Image) :</label>
+    <div class="col-sm-7">
+    <%= f.file_field :shopimg %>
+    <%= f.file_field :shopimg1 %>
+    <%= f.file_field :shopimg2 %>
+    <%= f.file_field :shopimg3 %>
+    <br>
+    </div>
+  </div>
+
+
+
+   <div class="form-group">
+   <div class="col-sm-6 pull-right">
+        <%= link_to 'Back', abouts_path, class: "btn btn-primary btn-sm" %>
+        <%= f.submit class: "btn btn-primary btn-sm" %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,9 @@
+@import url("http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css");
+ i.fa { font-size: 50px;text-align: right;position: absolute;top: 7px;right: 27px;outline: none; }
+a.visitor { transition: all .3s ease;-webkit-transition: all .3s ease;-moz-transition: all .3s ease;-o-transition: all .3s ease; }
+/* Visitor */
+a.visitor i,.visitor h4.list-group-item-heading { color:#1a242f; }
+a.visitor:hover { background-color:#337d6f; }
+a.visitor:hover * {color:#fff; }
+ a.visitor:hover .fa  { color:#fff; text-shadow: 0 0 10px #fff, 0 0 20px #0071B3, 0 0 30px #0071B3, 0 0 40px #0071B3, 0 0 70px #0071B3}
+

@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+
+<!-- <h1>Listing Abouts</h1> -->
+<% @abouts.each do |about| %>
+<div class="row">
+  <div class="col-md-12">
+    <div class="col-md-4">
+      <div class="list-group">
+        <a href="#" class="list-group-item active">
+          List 
+        </a>
+        <a href="#" class="list-group-item">Dapibus ac facilisis in
+        </a>
+        <a href="#" class="list-group-item">Morbi leo risus
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+            <div class="col-md-8">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Shop Name :</h3>
+                  </div>
+                  <div class="panel-body">
+                    <p><%= about.shopname %></p>
+                  </div>
+                </div>
+             </div>
+             <div class="col-md-12">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">About Information :</h3>
+                  </div>
+                  <div class="panel-body">
+                     <p>&nbsp;&nbsp;&nbsp;&nbsp; <%= about.aboutinfo %></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Shop Images :</h3>
+                    </div>
+                    <div class="panel-body">
+                       <div class="col-md-3"><%= image_tag about.shopimg.url(:thumb) %></div>
+                       <div class="col-md-3"> <%= image_tag about.shopimg1.url(:thumb) %></div>
+                       <div class="col-md-3"> <%= image_tag about.shopimg2.url(:thumb) %></div>
+                       <div class="col-md-3"><%= image_tag about.shopimg3.url(:thumb) %></div>
+                    </div>
+                </div>
+              </div>
+              <div class="form-group col-md-12 col-md-offset-4">
+                <%= link_to 'Destroy', about, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary btn-sm " %>
+                <%= link_to ' Edit ', edit_about_path(about), class: "btn btn-primary btn-sm" %>
+              </div>
+    </div>
+   </div>
+</div>
+
+     
+    <% end %>
+  
+
+<br>
+
+<!-- <%= link_to 'New About', new_about_path %> -->

@@ -1,0 +1,35 @@
+# == Schema Information
+#
+# Table name: abouts
+#
+#  id                    :integer          not null, primary key
+#  aboutinfo             :text(65535)
+#  shopname              :string(255)
+#  created_at            :datetime         not null
+#  updated_at            :datetime         not null
+#  user_id               :integer
+#  shopimg_file_name     :string(255)
+#  shopimg_content_type  :string(255)
+#  shopimg_file_size     :integer
+#  shopimg_updated_at    :datetime
+#  shopimg1_file_name    :string(255)
+#  shopimg1_content_type :string(255)
+#  shopimg1_file_size    :integer
+#  shopimg1_updated_at   :datetime
+#  shopimg2_file_name    :string(255)
+#  shopimg2_content_type :string(255)
+#  shopimg2_file_size    :integer
+#  shopimg2_updated_at   :datetime
+#  shopimg3_file_name    :string(255)
+#  shopimg3_content_type :string(255)
+#  shopimg3_file_size    :integer
+#  shopimg3_updated_at   :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  aboutinfo: MyText
+
+two:
+  aboutinfo: MyText

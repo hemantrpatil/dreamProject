@@ -1,0 +1,91 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Addresses</h1>
+
+
+
+    <% @addresses.each do |address| %>
+        <div class="row">
+  <div class="col-md-12">
+    <div class="col-md-4">
+      <div class="list-group">
+        <a href="#" class="list-group-item active">
+          List 
+        </a>
+        <a href="#" class="list-group-item">Dapibus ac facilisis in
+        </a>
+        <a href="#" class="list-group-item">Morbi leo risus
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+             <div class="col-md-12">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Adderss Information :</h3>
+                  </div>
+                  <div class="panel-body">
+                  <div class="col-md-4">
+                    <span> Name: </span>      <%= address.name %> </br>
+                  </div>  
+                  <div class="col-md-12"> 
+                    <span> Address: </span>   <%= address.address %> ,
+                  </div>
+                  <div class="col-md-4"> 
+                    <span> City: </span>      <%= address.city %> ,
+                  </div>
+                  <div class="col-md-4">
+                    <span> State: </span>     <%= address.state %> ,
+                  </div>
+                  <div class="col-md-4">  
+                    <span> Zipcode: </span>   <%= address.zipcode %> 
+                  </div>
+                  <div class="col-md-4">
+                    <span> Mobileno: </span>  <%= address.mobileno %> 
+                  </div>
+                  <div class="col-md-8">
+                    <span> Landlineno: </span><%= address.landlineno %> 
+                  </div> 
+                  <div class="col-md-4">
+                    <span> Emailid: </span>   <%= address.emailid %> 
+                  </div>
+                  <div class="col-md-4">
+                    <span> Website: </span>   <%= address.website %>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Map :</h3>
+                  </div>
+                  <div class="panel-body">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.571018233566!2d73.79184411446018!3d18.638355087340532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9b54638255d%3A0x4c82ff49c89ae675!2sKasturi+Infotec!5e0!3m2!1sen!2sin!4v1478589139384" width="630" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+          
+
+
+
+              <div class="form-group col-md-12 col-md-offset-4">
+
+      <!--         <%= link_to 'Show', address, class:"btn btn-primary btn-sm" %> -->
+              <%= link_to 'Edit', edit_address_path(address), class:"btn btn-primary btn-sm" %>
+              <%= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-primary btn-sm" %>
+             
+              </div>
+    </div>
+   </div>
+</div>
+
+
+
+    
+    
+    <% end %>
+
+
+ <!--    <%= link_to 'New Address', new_address_path %>
+ -->
